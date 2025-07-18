@@ -33,7 +33,7 @@ Before running this application, you'll need:
 
 ### 1. Clone the Repository
 ```bash
-git clone <repository-url>
+git clone https://github.com/SamuelLaki/PantryVision.git
 cd PantryVision
 ```
 
