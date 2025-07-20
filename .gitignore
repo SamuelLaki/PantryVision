@@ -63,3 +63,4 @@ Thumbs.db
 # API Keys (security)
 **/settings_local.py
 **/*_secret.py
+.vercel
