@@ -13,7 +13,7 @@ def recipes(request):
     img_name = filename.pop()
     path = os.path.join(os.getcwd(), 'media/images/')
 
-    api_user_token = 'LOG_MEAL_TOKEN'
+    api_user_token = os.environ.get('LOG_MEAL_TOKEN', 'your-logmeal-token')
     headers = {'Authorization': 'Bearer ' + api_user_token}
 
     # Single/Several Dishes Detection
@@ -34,7 +34,7 @@ def recipes(request):
     print(ingredient_p + "\n\n")
 
     ############# GOOGLE API REQUEST TO GENERATE RECIPIE LIST ###########################
-    palm.configure(api_key="PALM_API_KEY")
+    palm.configure(api_key=os.environ.get('PALM_API_KEY', 'your-palm-api-key'))
 
     defaults = {
         'model': 'models/chat-bison-001',
